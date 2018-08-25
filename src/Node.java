@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Node {
-    private double data;
+    private Object data;
     private ArrayList<Node> nodes;
 
 
-    public Node (double data, Node node){
+    public Node (Object data, Node node){
         this.data = data;
         nodes = new ArrayList<>();
         if(node != null) {
@@ -17,11 +17,17 @@ public class Node {
         nodes.add(node);
     }
 
-    public double getData() {
+    public void removeNode(int index){
+        if(index > 0 && index < nodes.size()){
+            nodes.remove(index);
+        }
+    }
+
+    public Object getData() {
         return data;
     }
 
-    public void setData(double data) {
+    public void setData(Object data) {
         this.data = data;
     }
 

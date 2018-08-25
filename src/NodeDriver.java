@@ -21,5 +21,10 @@ public class NodeDriver {
         n1.setData(new Scanner(System.in).nextDouble());
         System.out.println("Node 1's data is " + n3.getNodes().get(0).getData());
         System.out.println("Node 2's data is " + n3.getNodes().get(1).getData());
+
+        //test for removeNode
+        n3.removeNode(1);
+        System.out.println("Node 3 no longer points to Node 2. Therefore, trying to get its data should break the code");
+        System.out.println(n3.getNodes().get(1).getData());
     }
 }
